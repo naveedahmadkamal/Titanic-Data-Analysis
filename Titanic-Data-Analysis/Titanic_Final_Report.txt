@@ -1,0 +1,1300 @@
+
+
+================================================================
+                 TITANIC DATA ANALYSIS PROJECT
+                        FINAL REPORT
+================================================================
+
+                    DEVELOPED BY NAVEED AHMAD
+
+Project:
+Titanic Data Analysis Project
+
+Dataset:
+titanic_cleaned.csv
+
+Developer:
+Naveed Ahmad
+
+
+================================================================
+PROJECT WORKFLOW
+================================================================
+
+Stage 1  -> Data Loading & Understanding
+Stage 2  -> Data Cleaning & Preprocessing
+Stage 3  -> Data Visualization
+Stage 4  -> Statistical Analysis / Regression / ANOVA
+Stage 5  -> Correlation Analysis
+Stage 6  -> Parametric Statistical Tests
+Stage 7  -> Non-Parametric Statistical Tests
+Stage 8  -> EDA Summary
+Stage 9  -> Advanced Analysis & Insights
+Stage 10 -> Interactive Titanic Analytics Dashboard
+Final    -> Final Report
+
+
+================================================================
+1. DATASET OVERVIEW
+================================================================
+
+Total Rows:
+891
+
+Total Columns:
+18
+
+Total Passengers:
+891
+
+Survived:
+342
+
+Did Not Survive:
+549
+
+Overall Survival Rate:
+38.38%
+
+Average Age:
+29.36
+
+Average Fare:
+32.20
+
+
+================================================================
+2. DATA CLEANING AND PREPROCESSING
+================================================================
+
+The dataset was checked and prepared before performing
+the main analysis.
+
+The preprocessing work included:
+
+- Checking missing values.
+- Checking duplicate records.
+- Preparing numerical variables.
+- Creating Family Size.
+- Creating Age Groups.
+- Creating Family Size Groups.
+- Creating Fare Groups.
+
+Current Missing Values:
+0
+
+Duplicate Rows:
+116
+
+
+Family Size Formula:
+
+family_size = sibsp + parch + 1
+
+
+Age Groups:
+
+Child
+Teenager
+Young Adult
+Adult
+Senior
+
+
+Family Size Groups:
+
+Alone
+Small Family
+Medium Family
+Large Family
+
+
+Fare Groups:
+
+Low
+Medium-Low
+Medium
+High
+Very High
+
+
+================================================================
+3. DATA VISUALIZATION
+================================================================
+
+The Data Visualization stage was used to understand
+the Titanic dataset through charts and graphical
+comparisons.
+
+Instead of looking only at numerical values, charts
+were used to make the important patterns easier to
+see and understand.
+
+The main visualizations included:
+
+- Survival Distribution
+- Survival Percentage
+- Sex and Survival
+- Class and Survival
+- Age and Survival
+- Fare and Survival
+- Embarked and Survival
+- Alone and Survival
+- Family Size and Survival
+- Age Group and Survival
+- Passenger Category and Survival
+- Sex and Class
+- Class and Age Group
+- Sex, Class and Age Group
+- Family Size and Sex
+- Family Size Group
+- Class and Family Size Group
+- Sex, Class and Family Group
+- Fare Group and Survival
+- Fare Group and Class
+- Embarked and Class
+- Sex and Fare Group
+- Age Group and Sex
+- Class, Sex and Fare Group
+- Correlation Heatmap
+
+
+----------------------------------------------------------------
+3.1 SURVIVAL DISTRIBUTION
+----------------------------------------------------------------
+
+Survived:
+342
+
+Did Not Survive:
+549
+
+Survival Rate:
+38.38%
+
+Non-Survival Rate:
+61.62%
+
+
+INTERPRETATION:
+
+The survival chart gives the basic picture of the
+dataset.
+
+It shows the difference between passengers who survived
+and passengers who did not survive.
+
+The observed survival rate was 38.38%.
+This means that survival was not the outcome for all
+passengers and there was a clear difference between the
+two groups.
+
+
+----------------------------------------------------------------
+3.2 SEX AND SURVIVAL
+----------------------------------------------------------------
+
+Female Survival Rate:
+74.20%
+
+Male Survival Rate:
+18.89%
+
+
+INTERPRETATION:
+
+Female passengers had a higher observed survival rate (74.20%) than male passengers (18.89%).
+
+The chart makes this difference easier to understand
+because the two groups can be compared directly.
+
+This is an observed pattern in the Titanic dataset.
+It should not be treated as proof that sex alone
+caused the difference in survival.
+
+
+----------------------------------------------------------------
+3.3 PASSENGER CLASS AND SURVIVAL
+----------------------------------------------------------------
+
+Class 1 Survival Rate: 62.96%
+Class 2 Survival Rate: 47.28%
+Class 3 Survival Rate: 24.24%
+
+
+INTERPRETATION:
+
+Class 1 had the highest observed survival rate (62.96%), while Class 3 had the lowest observed survival rate (24.24%).
+
+The visualization shows that survival was not evenly
+distributed among the three passenger classes.
+
+Class should also be considered with other variables
+such as Sex, Age and Fare because these characteristics
+can appear together in the same passenger groups.
+
+
+----------------------------------------------------------------
+3.4 AGE AND SURVIVAL
+----------------------------------------------------------------
+
+INTERPRETATION:
+
+The age visualizations compare the ages of passengers
+who survived with those who did not survive.
+
+The age-group analysis gives an easier way to understand
+the pattern by dividing passengers into Child, Teenager,
+Young Adult, Adult and Senior groups.
+
+Survival rates were different across age groups. The Child group had the highest observed survival rate (57.97%), while the Young Adult group had the lowest (33.19%).
+
+The result describes the observed pattern in this
+dataset and should be considered together with other
+passenger characteristics.
+
+
+----------------------------------------------------------------
+3.5 FARE AND SURVIVAL
+----------------------------------------------------------------
+
+Average Fare - Did Not Survive:
+22.12
+
+Average Fare - Survived:
+48.40
+
+Difference:
+26.28
+
+
+INTERPRETATION:
+
+The fare charts show how ticket prices were distributed
+among survivors and non-survivors.
+
+The Very High fare group had the highest observed survival rate (73.58%), while the Low group had the lowest (19.94%).
+
+Fare should not be interpreted separately from Passenger
+Class because passengers in different classes generally
+had different fare distributions.
+
+
+----------------------------------------------------------------
+3.6 EMBARKATION AND SURVIVAL
+----------------------------------------------------------------
+
+Among the recorded embarkation points, C had the highest observed survival rate (55.36%), while S had the lowest (33.90%).
+
+
+INTERPRETATION:
+
+The chart shows that survival rates were different
+between the recorded embarkation points.
+
+However, the embarkation point alone does not provide
+a complete explanation of survival. Other variables,
+especially Class, Sex and Fare, should also be considered.
+
+
+----------------------------------------------------------------
+3.7 TRAVELLING ALONE AND SURVIVAL
+----------------------------------------------------------------
+
+False: 50.56% survival
+True: 30.35% survival
+
+
+INTERPRETATION:
+
+The travelling-alone visualization compares passengers
+who were travelling alone with those travelling with
+family members.
+
+This helps identify whether travelling arrangement
+was associated with different observed survival patterns.
+
+The result should be interpreted together with Family
+Size, Age, Sex and Passenger Class.
+
+
+----------------------------------------------------------------
+3.8 FAMILY SIZE AND SURVIVAL
+----------------------------------------------------------------
+
+Average Family Size:
+{average_family_size:.2f}
+
+Minimum Family Size:
+{minimum_family_size:.0f}
+
+Maximum Family Size:
+{maximum_family_size:.0f}
+
+
+INTERPRETATION:
+
+{family_interpretation}
+
+The visualization shows that survival was not necessarily
+the same for every family size.
+
+Family Size is derived from SibSp and Parch, so these
+variables are mathematically related.
+
+
+----------------------------------------------------------------
+3.9 AGE GROUP ANALYSIS
+----------------------------------------------------------------
+
+INTERPRETATION:
+
+Age was converted into five groups:
+
+Child
+Teenager
+Young Adult
+Adult
+Senior
+
+This makes it easier to compare groups instead of
+looking at individual ages one by one.
+
+{age_interpretation}
+
+
+----------------------------------------------------------------
+3.10 FARE GROUP ANALYSIS
+----------------------------------------------------------------
+
+INTERPRETATION:
+
+Fare was divided into five groups:
+
+Low
+Medium-Low
+Medium
+High
+Very High
+
+This grouping makes the fare pattern easier to compare.
+
+{fare_interpretation}
+
+The result should be viewed together with Passenger
+Class because Fare and Class are related.
+
+
+----------------------------------------------------------------
+3.11 MULTIVARIABLE VISUALIZATION
+----------------------------------------------------------------
+
+The project also used charts containing more than
+one passenger characteristic.
+
+These included:
+
+- Sex + Class
+- Class + Age Group
+- Sex + Class + Age Group
+- Family Size + Sex
+- Class + Family Size Group
+- Sex + Class + Family Group
+- Fare Group + Class
+- Sex + Fare Group
+- Age Group + Sex
+- Class + Sex + Fare Group
+
+
+INTERPRETATION:
+
+Multivariable charts provide more detail than a simple
+one-variable comparison.
+
+For example, survival can be compared across Sex and
+Passenger Class at the same time.
+
+This helps identify patterns that may not be visible
+when variables are analyzed separately.
+
+
+----------------------------------------------------------------
+3.12 CORRELATION HEATMAP
+----------------------------------------------------------------
+
+INTERPRETATION:
+
+The correlation heatmap provides an overall view of
+relationships between numerical variables.
+
+pclass          : -0.3385
+fare            : 0.2573
+parch           : 0.0816
+age             : -0.0649
+sibsp           : -0.0353
+family_size     : 0.0166
+
+
+A positive correlation means that two numerical variables
+tend to increase together.
+
+A negative correlation means that one tends to increase
+while the other tends to decrease.
+
+A value near zero indicates a weak linear relationship.
+
+Correlation is useful for finding relationships, but
+correlation alone does not prove causation.
+
+
+----------------------------------------------------------------
+3.13 VISUALIZATION SUMMARY
+----------------------------------------------------------------
+
+The visualization stage made the dataset easier to
+understand by converting numerical information into
+charts.
+
+The major observations were:
+
+1. Survival and non-survival were clearly different
+   groups in the dataset.
+
+2. Male and female passengers had different observed
+   survival rates.
+
+3. Passenger Class showed clear differences in
+   survival.
+
+4. Age groups showed different survival patterns.
+
+5. Fare groups showed different survival patterns.
+
+6. Embarkation groups showed different observed
+   survival rates.
+
+7. Family Size showed different survival patterns.
+
+8. Travelling alone and travelling with family
+   showed different patterns.
+
+9. Combined charts helped compare several passenger
+   characteristics together.
+
+10. The correlation heatmap provided a quick view
+    of numerical relationships.
+
+The visualization stage therefore provided the first
+clear picture of the important patterns in the data.
+
+These patterns were then examined further using
+statistical tests.
+
+
+================================================================
+4. STATISTICAL ANALYSIS / REGRESSION / ANOVA
+================================================================
+
+The statistical stage was used to check the relationships
+observed during visualization.
+
+The analysis included:
+
+- Simple Linear Regression
+- Multiple Linear Regression
+- Logistic Regression
+- One-Way ANOVA
+- Two-Way ANOVA
+- ANCOVA
+
+
+----------------------------------------------------------------
+4.1 SIMPLE LINEAR REGRESSION
+----------------------------------------------------------------
+
+Model:
+
+survived ~ fare
+
+R-Squared:
+{safe_value(simple_linear_r2, 4)}
+
+Fare p-value:
+{pvalue_text(simple_linear_p)}
+
+
+INTERPRETATION:
+
+This model checks the linear relationship between Fare
+and the numerical Survival outcome.
+
+Because Survival is a binary variable, linear regression
+has limitations here. Logistic Regression is more suitable
+when Survival is treated as a binary outcome.
+
+
+----------------------------------------------------------------
+4.2 MULTIPLE LINEAR REGRESSION
+----------------------------------------------------------------
+
+Model:
+
+survived ~ pclass + age + sibsp + parch + fare
+
+R-Squared:
+{safe_value(multiple_linear_r2, 4)}
+
+
+INTERPRETATION:
+
+This model examines several passenger variables together.
+
+The result should be interpreted as a statistical
+relationship within the analyzed dataset.
+
+It does not establish that any particular variable
+caused survival or non-survival.
+
+
+----------------------------------------------------------------
+4.3 LOGISTIC REGRESSION
+----------------------------------------------------------------
+
+Model:
+
+survived ~ pclass + age + sibsp + parch + fare
+
+Pseudo R-Squared:
+{safe_value(logistic_pseudo_r2, 4)}
+
+
+INTERPRETATION:
+
+Logistic Regression is appropriate for a binary outcome
+such as Survival.
+
+It estimates how the included variables are related
+to the probability of the observed survival outcome.
+
+
+Logistic Regression P-values:
+
+pclass: p < 0.001 (statistically significant)
+age: p < 0.001 (statistically significant)
+sibsp: p = 0.0071 (statistically significant)
+parch: p = 0.0301 (statistically significant)
+fare: p = 0.0616 (not statistically significant)
+
+
+
+----------------------------------------------------------------
+4.4 ONE-WAY ANOVA
+----------------------------------------------------------------
+
+Test:
+
+Fare among Passenger Classes
+
+F-Statistic:
+242.3442
+
+Result:
+
+p < 0.001 (statistically significant)
+
+
+INTERPRETATION:
+
+This test checks whether average Fare differed
+between Passenger Classes.
+
+The p-value helps determine whether the observed
+difference is statistically significant.
+
+
+----------------------------------------------------------------
+4.5 TWO-WAY ANOVA
+----------------------------------------------------------------
+
+Dependent Variable:
+
+Age
+
+Factors:
+
+Passenger Class
+Sex
+
+Passenger Class:
+
+p < 0.001 (statistically significant)
+
+Sex:
+
+p < 0.001 (statistically significant)
+
+Class × Sex Interaction:
+
+p = 0.4261 (not statistically significant)
+
+
+INTERPRETATION:
+
+Two-Way ANOVA examines Age while considering
+Passenger Class and Sex together.
+
+The interaction term checks whether the relationship
+between Class and Age changes depending on Sex.
+
+
+----------------------------------------------------------------
+4.6 ANCOVA
+----------------------------------------------------------------
+
+Model:
+
+fare ~ Passenger Class + Age
+
+Passenger Class:
+
+p < 0.001 (statistically significant)
+
+Age:
+
+p < 0.001 (statistically significant)
+
+
+INTERPRETATION:
+
+ANCOVA examines Fare differences between classes
+while also taking Age into account.
+
+This provides a more controlled comparison than
+looking at Passenger Class alone.
+
+
+================================================================
+5. CORRELATION ANALYSIS
+================================================================
+
+Correlation with Survival:
+
+pclass          : -0.3385
+fare            : 0.2573
+parch           : 0.0816
+age             : -0.0649
+sibsp           : -0.0353
+family_size     : 0.0166
+
+
+INTERPRETATION:
+
+Among the numerical variables examined,
+pclass had the strongest absolute
+linear correlation with Survival:
+
+r = -0.3385
+
+This only describes the strength and direction
+of a linear relationship. It does not prove causation.
+
+
+
+================================================================
+6. PARAMETRIC STATISTICAL TESTS
+================================================================
+
+6.1 WELCH T-TEST - FARE
+----------------------------------------------------------------
+
+T-Statistic:
+6.8391
+
+p < 0.001 (statistically significant)
+
+Cohen's d:
+0.5469
+
+
+INTERPRETATION:
+
+The Welch T-Test compares the average Fare between
+survivors and non-survivors.
+
+The p-value indicates whether the observed difference
+is statistically significant under the test assumptions.
+
+
+----------------------------------------------------------------
+6.2 WELCH T-TEST - AGE
+----------------------------------------------------------------
+
+T-Statistic:
+-1.8966
+
+p = 0.0583 (not statistically significant)
+
+Cohen's d:
+-0.1336
+
+
+INTERPRETATION:
+
+The test compares the average Age of survivors and
+non-survivors.
+
+Cohen's d provides an effect-size measure for the
+difference between the two groups.
+
+
+----------------------------------------------------------------
+6.3 ONE-WAY ANOVA - AGE BY CLASS
+----------------------------------------------------------------
+
+F-Statistic:
+59.3679
+
+p < 0.001 (statistically significant)
+
+Eta Squared:
+0.1179
+
+
+INTERPRETATION:
+
+This test checks whether Age differed between
+Passenger Classes.
+
+Eta Squared describes the proportion of age variation
+associated with the class grouping in this analysis.
+
+
+================================================================
+7. NON-PARAMETRIC STATISTICAL TESTS
+================================================================
+
+7.1 MANN-WHITNEY U - FARE
+----------------------------------------------------------------
+
+U-Statistic:
+129951.5000
+
+p < 0.001 (statistically significant)
+
+
+INTERPRETATION:
+
+The Mann-Whitney U test compares Fare distributions
+between survivors and non-survivors without requiring
+the same assumptions as a standard independent
+samples t-test.
+
+
+----------------------------------------------------------------
+7.2 MANN-WHITNEY U - AGE
+----------------------------------------------------------------
+
+U-Statistic:
+89779.5000
+
+p = 0.2697 (not statistically significant)
+
+
+INTERPRETATION:
+
+This test compares the Age distributions of survivors
+and non-survivors using a non-parametric approach.
+
+
+----------------------------------------------------------------
+7.3 KRUSKAL-WALLIS - AGE BY CLASS
+----------------------------------------------------------------
+
+H-Statistic:
+93.0106
+
+p < 0.001 (statistically significant)
+
+
+INTERPRETATION:
+
+The Kruskal-Wallis test checks whether Age distributions
+were different across Passenger Classes.
+
+
+----------------------------------------------------------------
+7.4 KRUSKAL-WALLIS - FARE BY CLASS
+----------------------------------------------------------------
+
+H-Statistic:
+438.0437
+
+p < 0.001 (statistically significant)
+
+
+INTERPRETATION:
+
+This test examines whether Fare distributions differed
+between Passenger Classes.
+
+
+================================================================
+8. CHI-SQUARE TESTS
+================================================================
+
+8.1 CLASS VS SURVIVAL
+----------------------------------------------------------------
+
+Chi-Square:
+102.8890
+
+Degrees of Freedom:
+2
+
+p < 0.001 (statistically significant)
+
+Cramer's V:
+0.3398
+
+
+INTERPRETATION:
+
+The Chi-Square test checks whether Passenger Class
+and Survival are statistically associated.
+
+Cramer's V provides an effect-size measure for the
+association.
+
+
+----------------------------------------------------------------
+8.2 EMBARKED VS SURVIVAL
+----------------------------------------------------------------
+
+Chi-Square:
+25.9645
+
+Degrees of Freedom:
+2
+
+p < 0.001 (statistically significant)
+
+Cramer's V:
+0.1707
+
+
+INTERPRETATION:
+
+This test checks whether Embarkation Point and Survival
+were statistically associated in the dataset.
+
+
+================================================================
+9. EDA SUMMARY
+================================================================
+
+Overall Survival Rate:
+38.38%
+
+
+Female Survival:
+74.20%
+
+Male Survival:
+18.89%
+
+
+Passenger Class Survival:
+
+Class 1: 62.96%
+Class 2: 47.28%
+Class 3: 24.24%
+
+
+
+Fare Difference:
+
+Average Fare of Survivors:
+48.40
+
+Average Fare of Non-Survivors:
+22.12
+
+Difference:
+26.28
+
+
+INTERPRETATION:
+
+The EDA stage provides a general understanding of
+the passenger population before moving to more
+advanced statistical analysis.
+
+The main patterns involve Sex, Passenger Class,
+Age, Fare, Embarkation and Family Size.
+
+
+================================================================
+10. ADVANCED ANALYSIS AND INSIGHTS
+================================================================
+
+Highest Observed Survival by Sex:
+
+Female =
+74.20%
+
+
+Highest Observed Class Survival:
+
+Class 1 =
+62.96%
+
+
+Lowest Observed Class Survival:
+
+Class 3 =
+24.24%
+
+
+Highest Observed Fare Group:
+
+Very High =
+73.58%
+
+
+Highest Observed Family Size:
+
+4 =
+72.41%
+
+
+INTERPRETATION:
+
+The advanced analysis combines the main variables
+to understand the Titanic dataset from different
+angles.
+
+The strongest visible patterns were found by comparing
+Sex, Class, Fare, Age and Family Size together.
+
+These results are descriptive observations from the
+dataset and should be considered alongside the formal
+statistical tests.
+
+
+----------------------------------------------------------------
+MULTICOLLINEARITY
+----------------------------------------------------------------
+
+Family Size was calculated directly from SibSp and Parch using the formula family_size = sibsp + parch + 1.
+
+Important relationship:
+
+family_size = sibsp + parch + 1
+
+Because Family Size is calculated from SibSp and Parch,
+these variables are mathematically related.
+
+Including all of them in the same regression model can
+create multicollinearity.
+
+Therefore, variable selection is important when
+building statistical or machine-learning models.
+
+
+================================================================
+11. INTERACTIVE TITANIC ANALYTICS DASHBOARD
+================================================================
+
+
+
+The Stage 10 Interactive Titanic Analytics Dashboard
+was developed using Python, Pandas, Matplotlib and Tkinter.
+
+The dashboard presents the important results of the
+Titanic analysis in an interactive visual format.
+
+Main dashboard sections include:
+
+1. Executive Overview
+2. Demographics
+3. Fare and Embarkation
+4. Family and Age
+5. Correlation and Statistics
+6. Analyst Insights
+
+The dashboard contains:
+
+- KPI Cards
+- Survival Distribution
+- Survival Percentage
+- Sex and Survival
+- Class and Survival
+- Age and Survival
+- Fare and Survival
+- Embarked and Survival
+- Alone and Survival
+- Family Size and Survival
+- Age Group and Survival
+- Passenger Category and Survival
+- Sex and Class
+- Class and Age Group
+- Sex, Class and Age Group
+- Family Size and Sex
+- Family Size Group
+- Class and Family Size Group
+- Sex, Class and Family Group
+- Fare Group and Survival
+- Fare Group and Class
+- Embarked and Class
+- Sex and Fare Group
+- Age Group and Sex
+- Class, Sex and Fare Group
+- Correlation Heatmap
+
+The dashboard provides a visual summary of the
+complete Titanic analysis workflow.
+
+Developed by:
+
+Naveed Ahmad
+
+
+
+================================================================
+12. MAIN FINDINGS
+================================================================
+
+1. The dataset contained 891 passenger
+   records used in the analysis.
+
+2. The overall observed survival rate was
+   38.38%.
+
+3. Male and female passengers showed different
+   observed survival rates.
+
+4. Passenger Class showed clear differences in
+   observed survival rates.
+
+5. Age groups showed different survival patterns.
+
+6. Fare groups also showed different survival patterns.
+
+7. Embarkation groups showed differences in observed
+   survival rates.
+
+8. Family Size showed different survival patterns.
+
+9. Statistical tests were used to examine whether
+   observed differences were statistically supported.
+
+10. Logistic Regression was used because Survival
+    is a binary outcome.
+
+11. Correlation analysis helped identify relationships
+    among numerical variables.
+
+12. Family Size is mathematically related to SibSp
+    and Parch, which is important when selecting
+    variables for regression.
+
+13. The Interactive Dashboard brought the major
+    project results together in one visual interface.
+
+
+================================================================
+13. PROJECT LIMITATIONS
+================================================================
+
+The analysis has several limitations:
+
+1. The Titanic dataset represents a historical
+   passenger population.
+
+2. The results describe this dataset and should not
+   automatically be generalized to other populations.
+
+3. Some variables contain missing values.
+
+4. Some subgroups may contain fewer observations.
+
+5. Passenger Class and Fare are related variables.
+
+6. Family Size is derived from SibSp and Parch.
+
+7. Statistical significance does not prove causation.
+
+8. Regression results depend on the variables included
+   in the model.
+
+9. Observational data cannot by itself establish
+   cause-and-effect relationships.
+
+
+================================================================
+14. COMPLETE PROJECT WORKFLOW
+================================================================
+
+Data Loading
+      |
+      v
+Data Understanding
+      |
+      v
+Data Cleaning
+      |
+      v
+Data Preprocessing
+      |
+      v
+Data Visualization
+      |
+      v
+Statistical Analysis
+      |
+      v
+Regression Analysis
+      |
+      v
+ANOVA / ANCOVA
+      |
+      v
+Correlation Analysis
+      |
+      v
+Parametric Tests
+      |
+      v
+Non-Parametric Tests
+      |
+      v
+Advanced Analysis
+      |
+      v
+Interactive Dashboard
+      |
+      v
+Interpretation
+      |
+      v
+Final Report
+
+
+================================================================
+15. FINAL CONCLUSION
+================================================================
+
+The Titanic Data Analysis Project demonstrates a complete
+data analysis workflow using Python.
+
+The project started with loading and understanding the
+dataset. The data was then checked, cleaned and prepared
+for analysis.
+
+The Data Visualization stage converted the dataset into
+different charts. These charts helped identify patterns
+in Survival, Sex, Passenger Class, Age, Fare, Embarkation
+and Family Size.
+
+The visualization stage was important because it made
+the data easier to understand before applying statistical
+tests.
+
+After visualization, statistical methods were applied
+to examine the observed relationships.
+
+The project included:
+
+- Simple Linear Regression
+- Multiple Linear Regression
+- Logistic Regression
+- ANOVA
+- ANCOVA
+- Correlation Analysis
+- Welch T-Test
+- Mann-Whitney U Test
+- Kruskal-Wallis Test
+- Chi-Square Test
+- Cohen's d
+- Eta Squared
+- Cramer's V
+
+The analysis also examined multicollinearity and showed
+the mathematical relationship between Family Size,
+SibSp and Parch.
+
+The Interactive Titanic Analytics Dashboard then
+presented the major results in a practical visual
+interface.
+
+The main lesson from the project is that a good data
+analysis process should not depend on only one chart
+or one statistical test.
+
+Data visualization helps us see the pattern.
+
+Statistical testing helps us examine the evidence.
+
+Correlation helps us understand numerical relationships.
+
+Regression helps us study several variables together.
+
+The dashboard helps communicate the results.
+
+Finally, interpretation connects all of these steps
+and explains what the analysis actually shows.
+
+Therefore, this project demonstrates practical skills
+in:
+
+- Python
+- Pandas
+- NumPy
+- SciPy
+- Statsmodels
+- Matplotlib
+- Tkinter
+- Data Cleaning
+- Data Preprocessing
+- Exploratory Data Analysis
+- Data Visualization
+- Statistical Analysis
+- Regression
+- ANOVA
+- ANCOVA
+- Correlation
+- Hypothesis Testing
+- Effect Size Analysis
+- Dashboard Development
+- Data Interpretation
+
+
+================================================================
+DEVELOPER
+================================================================
+
+                    DEVELOPED BY
+
+                     NAVEED AHMAD
+
+                TITANIC DATA ANALYSIS
+                     PROJECT
+
+
+================================================================
+FINAL REPORT COMPLETED
+================================================================
+
+Developer:
+Naveed Ahmad
+
+Project:
+Titanic Data Analysis Project
+
+Dataset:
+titanic_cleaned.csv
+
+Report:
+Titanic_Final_Report.txt
+
+================================================================
